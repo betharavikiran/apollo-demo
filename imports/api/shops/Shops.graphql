@@ -1,0 +1,18 @@
+type Shop {
+    _id: String!
+    name: String!
+    telephone: String!
+    website: String!
+    startTime: String!
+    endTime: String!
+    products: [Product]
+    completed: Boolean
+}
+
+type Query {
+    shops: [Shop]
+}
+
+type Mutation {
+    createShop(name: String!, telephone: String!, website: String!, startTime: String!, endTime: String! ): Shop
+}

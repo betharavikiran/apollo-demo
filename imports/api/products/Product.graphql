@@ -1,0 +1,11 @@
+type Product {
+    _id: String
+    name: String
+    price: Float
+    completed: Boolean
+}
+
+extend type Mutation {
+    createProduct(name: String!,price: Float!, shopId: String!): Product
+    toggleProduct(_id: String!): Product
+}
